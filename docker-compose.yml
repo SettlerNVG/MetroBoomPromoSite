@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  metro-boom-site:
+    build: .
+    container_name: metro-boom-site
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
