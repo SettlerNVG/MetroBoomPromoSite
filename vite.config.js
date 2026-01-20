@@ -5,7 +5,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    host: true
+    host: true,
+    allowedHosts: [
+      '.ngrok.io',
+      '.ngrok-free.app',
+      '.ngrok-free.dev'
+    ]
   },
   build: {
     outDir: 'dist',

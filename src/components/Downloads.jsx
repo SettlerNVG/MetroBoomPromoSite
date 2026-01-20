@@ -5,12 +5,12 @@ const downloadFiles = {
   build: {
     url: '/downloads/metro-boom-build.zip',
     filename: 'metro-boom-build.zip',
-    size: 'Размер будет отображен после добавления файла'
+    isExternal: false
   },
   source: {
-    url: '/downloads/metro-boom-source.zip',
+    url: 'https://drive.google.com/file/d/1AfwVqAe4iwoBa9y7VmGG7UOuaID2dxWi/view?usp=sharing',
     filename: 'metro-boom-source.zip',
-    size: 'Размер будет отображен после добавления файла'
+    isExternal: true
   }
 }
 
@@ -19,6 +19,12 @@ const Downloads = () => {
 
   const handleDownload = (type) => {
     const file = downloadFiles[type]
+    
+    // Если внешняя ссылка - просто открываем
+    if (file.isExternal) {
+      window.open(file.url, '_blank')
+      return
+    }
     
     // Проверяем, существует ли файл
     fetch(file.url, { method: 'HEAD' })
@@ -54,8 +60,8 @@ const Downloads = () => {
       <p className="section-subtitle">Скачайте билд или исходные файлы проекта</p>
 
       <div className="downloads-grid">
-        <div className="download-card orange">
-          <div className="download-icon orange-bg">
+        <div className="download-card cyan">
+          <div className="download-icon cyan-bg">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
               <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
             </svg>
@@ -66,7 +72,7 @@ const Downloads = () => {
             <span className="file-format">📦 ZIP архив</span>
           </div>
           <button 
-            className="download-btn orange-btn"
+            className="download-btn cyan-btn"
             onClick={() => handleDownload('build')}
             disabled={downloading === 'build'}
           >
@@ -83,14 +89,14 @@ const Downloads = () => {
           <h3>Скачать исходники</h3>
           <p>Исходные файлы проекта UE5</p>
           <div className="download-info">
-            <span className="file-format">📦 ZIP архив</span>
+            <span className="file-format">☁️ Google Drive</span>
           </div>
           <button 
             className="download-btn cyan-btn"
             onClick={() => handleDownload('source')}
             disabled={downloading === 'source'}
           >
-            {downloading === 'source' ? '⬇️ Загрузка...' : '⬇️ Скачать исходники'}
+            {downloading === 'source' ? '⬇️ Загрузка...' : '🔗 Открыть исходники'}
           </button>
         </div>
       </div>

@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.gitignore
+*.md
+logs
+*.log
+.DS_Store
+.env
+.env.*
+PUBLIC_URL.txt
+Instructions

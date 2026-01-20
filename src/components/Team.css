@@ -21,7 +21,7 @@
 }
 
 .team-card.highlighted {
-  border-color: var(--color-cyan);
+  border-color: var(--color-orange);
 }
 
 .team-photo {

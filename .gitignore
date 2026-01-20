@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Public URL
+PUBLIC_URL.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ngrok
+ngrok.yml

@@ -6,10 +6,10 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies including terser
+RUN npm ci && npm install terser
 
-# Copy source code
+# Copy source code (excluding node_modules via .dockerignore)
 COPY . .
 
 # Build the app

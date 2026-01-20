@@ -8,13 +8,13 @@ const teamMembers = [
     role: 'PM и геймдизайнер',
     roleEn: 'Project Manager & Game Designer',
     image: '/images/denis.jpg',
-    highlighted: false
+    highlighted: true
   },
   {
     id: 2,
     name: 'Иманаков Владислав',
     role: 'PM и программист',
-    roleEn: 'Project Manager & Programmer',
+    roleEn: 'Project Manager',
     image: '/images/vladislav.jpg',
     highlighted: true
   },
@@ -24,7 +24,7 @@ const teamMembers = [
     role: 'Сценарист',
     roleEn: 'Scriptwriter',
     image: '/images/vladimir.jpg',
-    highlighted: false
+    highlighted: true
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const teamMembers = [
     role: 'DevOps',
     roleEn: 'DevOps Engineer',
     image: '/images/nikita.jpg',
-    highlighted: false
+    highlighted: true
   }
 ]
 
@@ -55,7 +55,7 @@ const Team = () => {
               <img src={member.image} alt={member.name} />
             </div>
             <h3>{member.name}</h3>
-            <p className={`role ${member.highlighted ? 'cyan-text' : 'orange-text'}`}>
+            <p className={`role ${member.highlighted ? 'orange-text' : 'cyan-text'}`}>
               {member.role}
             </p>
             <p className="description">{member.roleEn}</p>

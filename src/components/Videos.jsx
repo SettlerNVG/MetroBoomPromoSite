@@ -4,16 +4,16 @@ import './Videos.css'
 const videos = [
   {
     id: 1,
-    title: 'Геймплейный трейлер',
-    description: 'Демонстрация основных механик игры',
-    thumbnail: '/videos/trailer-thumb.jpg',
+    title: 'Трейлер',
+    description: 'Официальный трейлер игры',
+    thumbnail: null,
     videoUrl: '/videos/trailer.mp4'
   },
   {
     id: 2,
-    title: 'Процесс разработки',
-    description: 'Взгляд за кулисы создания игры',
-    thumbnail: '/videos/devlog-thumb.jpg',
+    title: 'Геймплейное видео',
+    description: 'Демонстрация игрового процесса',
+    thumbnail: null,
     videoUrl: '/videos/devlog.mp4'
   }
 ]

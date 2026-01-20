@@ -17,6 +17,9 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">Metro Boom</h1>
         <p className="hero-subtitle">Кооперативная приключенческая игра на Unreal Engine 5</p>
+        <p className="hero-description">
+          Два персонажа. Одна встреча. Бесконечные приключения в подземном мире метро.
+        </p>
         <div className="hero-buttons">
           <button className="hero-btn primary" onClick={() => {
             document.getElementById('downloads')?.scrollIntoView({ behavior: 'smooth' })
