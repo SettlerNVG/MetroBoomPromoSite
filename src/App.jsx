@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Downloads from './components/Downloads'
+import Links from './components/Links'
 import Team from './components/Team'
 import Videos from './components/Videos'
 import About from './components/About'
@@ -25,6 +26,7 @@ function App() {
       <Hero />
       <main>
         <Downloads />
+        <Links />
         <Team />
         <Videos />
         <About />

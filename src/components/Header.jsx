@@ -22,6 +22,7 @@ const Header = ({ scrolled }) => {
 
         <nav className={`nav ${mobileMenuOpen ? 'open' : ''}`}>
           <button onClick={() => scrollToSection('downloads')}>Загрузки</button>
+          <button onClick={() => scrollToSection('links')}>Ссылки</button>
           <button onClick={() => scrollToSection('team')}>Команда</button>
           <button onClick={() => scrollToSection('videos')}>Видео</button>
           <button onClick={() => scrollToSection('about')}>О проекте</button>
