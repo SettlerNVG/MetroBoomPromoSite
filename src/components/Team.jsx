@@ -52,7 +52,7 @@ const Team = () => {
             onClick={() => setSelectedMember(member)}
           >
             <div className="team-photo">
-              <img src={member.image} alt={member.name} />
+              <img src={member.image} alt={member.name} loading="lazy" />
             </div>
             <h3>{member.name}</h3>
             <p className={`role ${member.highlighted ? 'orange-text' : 'cyan-text'}`}>

@@ -6,14 +6,14 @@ const videos = [
     id: 1,
     title: 'Трейлер',
     description: 'Официальный трейлер игры',
-    thumbnail: '/videos/trailer-thumb.jpg',
+    thumbnail: '/videos/trailer-thumb.png',
     videoUrl: '/videos/trailer.mp4'
   },
   {
     id: 2,
     title: 'Геймплейное видео',
     description: 'Демонстрация игрового процесса',
-    thumbnail: '/videos/devlog-thumb.jpg',
+    thumbnail: '/videos/devlog-thumb.png',
     videoUrl: '/videos/devlog.mp4'
   }
 ]
